@@ -1,0 +1,137 @@
+/* Main Review Section */
+.review-section {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #3498db);
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+/* Review Header */
+.review-section h3 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Sort Options */
+.sort-options {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sort-options select {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.sort-options select:focus {
+  border-color: #3498db;
+}
+
+/* Reviews Container */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.review-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-card p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #34495e;
+}
+
+.review-card strong {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.review-card small {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.review-card .rating {
+  font-size: 18px;
+  color: #f39c12;
+}
+
+/* Review Form */
+form {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+  width: 90%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+form button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 90%;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 700px) {
+  .review-section {
+    padding: 20px;
+  }
+
+  .review-card {
+    padding: 15px;
+  }
+
+  .sort-options select {
+    width: 100%;
+  }
+
+  form button {
+    padding: 12px;
+  }
+}

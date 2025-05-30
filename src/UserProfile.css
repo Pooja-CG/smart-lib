@@ -1,0 +1,166 @@
+/* General Reset and Background */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffffff, #3498db); /* Matches Bookpage.css */
+  font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.profile-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+ /* background-color: #fff;*/
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Profile Title */
+.profile-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Profile Card */
+.profile-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile Icon */
+.profile-icon {
+  margin-bottom: 1.5rem;
+}
+
+.profile-icon img {
+  width: 100px; /* Larger size for the profile page */
+  height: 100px;
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Ensures the image fits nicely */
+  border: 3px solid #3498db; /* Matches the blue theme */
+  background: linear-gradient(135deg, #ffffff 0%, #e9ecef 100%); /* Gradient background */
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-icon img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.9rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Profile Info */
+.profile-info {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.profile-info p {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+
+.profile-info strong {
+  color: #2c3e50;
+}
+
+/* Toggle Password Button */
+.toggle-password {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.75rem;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle-password:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #1f6a9a 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Search History Card */
+.search-history-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Search History List */
+.search-history-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-history-item {
+  background: #ffffff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-history-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* No History Message */
+.no-history {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

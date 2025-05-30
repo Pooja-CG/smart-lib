@@ -1,0 +1,122 @@
+/* Apply the background gradient to the body for the whole page */ 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0px;
+  background: linear-gradient(to bottom, #ffffff, #3498db);
+  font-family: Arial, sans-serif;
+}
+
+.book-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.book-card {
+  padding: 20px;
+}
+
+.book-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.book-author {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.book-genre {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.book-description {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.book-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.borrow-button, .return-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.borrow-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.borrow-button:hover {
+  background-color: #2980b9;
+}
+
+.return-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.return-button:hover {
+  background-color: #c0392b;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* 🎖 Floating Badge popup style */
+.badge-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  background-color: #f1c40f;
+  border: 2px solid #f39c12;
+  border-radius: 10px;
+  color: #2c3e50;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* ✖ Close button */
+.close-button {
+  margin-top: 10px;
+  background-color: #c0392b;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #a93226;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
