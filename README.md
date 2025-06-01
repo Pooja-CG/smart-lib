@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+SmartLib - Library Management System 📚
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
 
-## Available Scripts
+SmartLib is a modern library management system designed to streamline book browsing, borrowing, and management for users. Built with a React front-end and enhanced with efficient data structures and algorithms, SmartLib offers a seamless experience for library users. Key features include an optimized book search using Horspool's algorithm, a Most Recently Used (MRU) book tracking system with a Doubly Linked List and Hash Map, a user-friendly homepage with analytics, and automated email notifications for book borrowing. Deployed on Netlify, SmartLib is ideal for small to medium-sized libraries aiming to digitize their operations. 📖✨
 
-In the project directory, you can run:
+Features
 
-### `npm start`
+Efficient Book Search 🔍
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Search for books by title or author using Horspool's algorithm.
+Includes genre filtering for refined search results.
+Time Complexity: O(n/m) average case for string matching.
+Most Recently Used (MRU) Tracking 🔄
+Tracks up to 5 recently viewed books using a Doubly Linked List and Hash Map.
+Doubly Linked List: Maintains the order of books (most recent at the start, oldest at the end).
+Hash Map: Provides O(1) lookups to check if a book is in the history and access its node.
+Displayed in a dedicated "Recently Viewed Books" section for quick access.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+User-Friendly Homepage 🏠
 
-### `npm test`
+Displays analytics, borrowed books preview, featured books, and feature highlights.
+Responsive design for a seamless experience across devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Borrowing Notifications 📧
 
-### `npm run build`
+Sends automated email notifications to users upon borrowing a book.
+Includes details like book title, borrow date, due date (7 days), and return instructions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Responsive Design 📱
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Styled with CSS for a clean and intuitive user interface.
+Scalable Architecture 🚀
+Front-end focused with potential for backend integration (e.g., for dynamic book data or user authentication).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Technologies Used
 
-### `npm run eject`
+Front-End:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React.js: For building the user interface.
+React Router: For client-side routing.
+CSS: For styling components (e.g., HomePage.css, Books.css).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Data Structures & Algorithms:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Horspool's Algorithm: For efficient book searching in Books.jsx.
+Doubly Linked List + Hash Map: For tracking Most Recently Used books with O(1) operations.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Email Notifications:
 
-## Learn More
+Python: For sending automated emails (email_notification.py).
+smtplib: For SMTP email integration with Gmail.
+NLTK: For potential text processing (currently used for generating sample text).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Getting Started
 
-### Code Splitting
+Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Node.js (>= 14.0.0) and npm (>= 5.6) for the React front-end.
+Python (>= 3.6) for the email notification script.
+Git: For version control and deployment.
 
-### Analyzing the Bundle Size
+Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Clone the Repository:
 
-### Making a Progressive Web App
+git clone https://github.com/Pooja-CG/smart-lib.git
+cd smart-lib
+Install Front-End Dependencies: Navigate to the smartlib directory and install the required packages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+cd smartlib
+npm install
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+Install Python Dependencies (for email notifications): Install the required Python packages for the email script:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+pip install nltk
 
-### `npm run build` fails to minify
+Then, in a Python shell, download NLTK data (optional if not using generate_text):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+
+Running the Application Locally
+Start the React Front-End:
+
+cd smartlib
+npm start
+The app will run at http://localhost:3000.
+
+Test the Email Notification:
+
+
+Open email_notification.py and update the following fields with your email credentials:
+sender_email: Your Gmail address (e.g., studysynchub24@gmail.com).
+sender_password: Your Gmail App Password (generate this in your Google Account settings under Security > 2-Step Verification > App Passwords).
+recipient_email: The recipient’s email address.
+Replace placeholders (e.g., [Book Title], [Due Date]) with actual values.
+
+Run the script:
+
+python email_notification.py
+Check the recipient email for the borrowing notification. 📬
+
+Usage
+
+Browse Books:
+
+Visit the /books page to view and search for books by title or author.
+Use the genre filter to narrow down results.
+View Recently Used Books:
+See the "Recently Viewed Books" section to quickly access up to 5 of your most recently viewed books.
+Clicking a book moves it to the top of the list.
+
+Borrow a Book:
+
+Select a book to borrow (functionality can be extended with a backend).
+Receive an email notification with borrowing details and a 7-day return deadline.
+
+Explore the Homepage:
+
+Check analytics, borrowed books, and featured sections for a comprehensive library experience.
+
+Return a Book:
+
+Follow the instructions in the email to return the book within 7 days to avoid late fees.
+
+Project Structure
+
+smartlib/src/component/ui/: Contains reusable UI components (e.g., card).
+
+smartlib/src/Books.jsx: Implements the book search page with Horspool's algorithm and MRU tracking using a Doubly Linked List and Hash Map.
+
+smartlib/src/HomePage.jsx: Renders the homepage with analytics, borrowed books, and feature highlights.
+
+smartlib/src/HomePage.css, Books.css: Styles for the homepage and books page.
+
+email_notification.py: Python script for sending borrowing confirmation emails.
+
+Contact
+
+For questions or feedback, reach out to poojacg48@gmail.com. 📧
